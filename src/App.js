@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import HompePage from './pages/homepage/hompepage.component';
+
+const HatsPage = () => (
+  <h1>hellloooooo</h1>
+
+)
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+       <Route path='/' component={<HompePage />} ></Route>
+      <Route path='/hats' component={<HatsPage />} ></Route>
+    </Routes>
   );
 }
 
